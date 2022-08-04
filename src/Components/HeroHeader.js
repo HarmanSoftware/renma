@@ -41,7 +41,7 @@ export default function HeroHeader() {
    {weather.location.name}
    {weather.current.temp_c}°C{' | '}
    {weather.current.condition.text}
-   <img src={weather.current.condition.icon} width="30px" />
+   <img src={weather.current.condition.icon} width="30px" alt='weather condition icon'/>
       </div>
     <div className='flex items-center justify-center'>
     <button type='button' className='bg-scampi w-5 h-4 mx-1'></button> 
