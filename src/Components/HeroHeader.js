@@ -28,8 +28,7 @@ export default function HeroHeader() {
        {weather && <LocalTime/>}
     </div>    
     <div className='flex items-center justify-center text-base font-medium'>
-   {weather.location.name}
-   {weather.location.country='Iraq'} {'|'}
+   {weather.location.name}{' |'}
    {weather.current.temp_c}°C{' | '}
    {weather.current.condition.text}
    <img src={weather.current.condition.icon} width="35px" alt='weather condition icon'/>
