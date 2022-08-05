@@ -1,11 +1,16 @@
-import React from 'react'
+import React,{useState,createContext} from 'react'
 import {useLocation,Link } from "react-router-dom";
 import { Disclosure, Menu } from '@headlessui/react';
 import {MenuIcon, XIcon } from '@heroicons/react/outline';
+import DarkModeToggle from "react-dark-mode-toggle";
+import '../Assets/DarkMode.css'
 
-export default function NavBar() {
-  
-  const location = useLocation();
+
+
+export default function NavBar(props) {
+
+ 
+  const location = useLocation(); 
 
     const navigation = [
         { name: 'Home', href: '/', current: true},
@@ -53,7 +58,7 @@ export default function NavBar() {
                   <p className='text-white text-xl font-medium px-2'>Renma</p>
                 </div>
                 <div className="hidden sm:block sm:ml-6">
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-4" id='desktop-nav-link'>
                     {navigation.map((item) => (
                       <Link
                         key={item.name}
@@ -66,8 +71,7 @@ export default function NavBar() {
                           'px-1 py-2 rounded-md text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined} 
-                      >
-                       
+                      >                       
                         {item.name}
                       </Link>
                     ))}                    
@@ -78,9 +82,9 @@ export default function NavBar() {
                 {/* Profile dropdown */}
                 <Menu as="div" className="ml-3 relative">
                   <div>
-                    <button className="bg-white px-1 py-1 font-medium text-base bg-white-800 flex rounded-md hover:bg-mauve">
-                      Mode
-                    </button>
+                    <span className="flex">
+                    <DarkModeToggle size={80} onChange={props.toglleprops} checked={props.themeprops === "dark"} />
+                    </span>
                   </div>                  
                 </Menu>
               </div>
@@ -88,7 +92,7 @@ export default function NavBar() {
           </div>
 
           <Disclosure.Panel className="sm:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 text-center">
+            <div className="px-2 pt-2 pb-3 space-y-1 text-center" id='mob-nav-link'>
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}

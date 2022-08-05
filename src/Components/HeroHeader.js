@@ -3,11 +3,11 @@ import { useState,useEffect } from 'react';
 import axios from 'axios';
 import LoadSpiner from './LoadSpiner';
 import LocalTime from './LocalTime';
+import '../Assets/DarkMode.css'
 
 export default function HeroHeader() {
      
-    const [weather, setWeather] = useState();   
-    const [error,setError]=useState(); 
+    const [weather, setWeather] = useState();      
 
     useEffect(()=>{
       const weatherAPI=`https://api.weatherapi.com/v1/current.json?key=493460b7dcd54f3bb2f110359220208&q=erbil&api=no`;
@@ -15,15 +15,15 @@ export default function HeroHeader() {
       axios.get(weatherAPI)
       .then((result)=>{setWeather(result.data);
         })
-      .catch((e)=>{setError(e)})
+      .catch(()=>{})
       .then(()=>{});
     },[weather]); 
   
-    if (!weather) return (<LoadSpiner/>);      
+    if (!weather) return <LoadSpiner/>
     
   return (
     <>
-     <div className='flex content-start justify-between bg-mauve'>
+     <div className='flex content-start justify-between bg-mauve' id='hero-header'>
     <div className='flex items-center justify-center text-base font-medium px-1 h-12' tabIndex="1">  
        {weather && <LocalTime/>}
     </div>    
