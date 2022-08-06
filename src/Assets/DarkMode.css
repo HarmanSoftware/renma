@@ -2,18 +2,22 @@
     background-color: #f3ebf6;    
   }  
   #dark {
-    background-color: #46045e;
+    background-color: #121212;
     color: #fff;
   }
   #light .main {
     background-color: #fff;
   }  
   #dark .main {
-    background-color: #38004c;    
+    background-color: #121212;    
   }
   #dark #hero-header {
       color: #fff;
-      background-color: #46045e;
+      background-color: #121212;
+  }
+  #dark #nav-bg{
+background-color: #000;
+color:#fff
   }
   #dark #desktop-nav-link{
     color: #000;
@@ -26,8 +30,8 @@
     color: #fff;
   }
   #dark ::selection {
-    background: #270440;
-    color: #fff;
+    background-color: #fff !important;   
+    color: #000; 
   }
   .switch {    
     width: 100vw;

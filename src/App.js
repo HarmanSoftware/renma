@@ -3,7 +3,8 @@ import '../src/Assets/App.css';
 import '../src/Assets/DarkMode.css'
 import {Routes, Route} from "react-router-dom";
 
-import { createContext, useState } from 'react'
+
+import { createContext, useState,useEffect} from 'react'
 
 import NavBar from './Components/NavBar';
 import Home from './Pages/Home';
@@ -17,10 +18,17 @@ import HeroHeader from './Components/HeroHeader';
 export const ThemeContext = createContext(null);
 
 function App() {  
-  const [theme, setTheme] = useState("light");
+  let [theme, setTheme] = useState("light");
   function toggleTheme() {
-    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));       
   };
+  
+  let data;
+  useEffect(()=>{
+    localStorage.setItem('modes',theme); 
+    data= localStorage.getItem('modes'); 
+  },[data]);
+
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>    
     <div className="App" id={theme}>

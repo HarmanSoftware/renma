@@ -1,15 +1,12 @@
-import React,{useState,createContext} from 'react'
+import React from 'react' 
 import {useLocation,Link } from "react-router-dom";
 import { Disclosure, Menu } from '@headlessui/react';
 import {MenuIcon, XIcon } from '@heroicons/react/outline';
 import DarkModeToggle from "react-dark-mode-toggle";
 import '../Assets/DarkMode.css'
 
-
-
 export default function NavBar(props) {
-
- 
+  
   const location = useLocation(); 
 
     const navigation = [
@@ -27,7 +24,7 @@ export default function NavBar(props) {
 
   return (
     <>
-    <Disclosure as="nav" className="bg-purple">
+    <Disclosure as="nav" className="bg-purple" id='nav-bg'>
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
