@@ -10,14 +10,14 @@ export default function HeroHeader() {
     const [weather, setWeather] = useState();      
 
     useEffect(()=>{
-      const weatherAPI=`https://api.weatherapi.com/v1/current.json?key=493460b7dcd54f3bb2f110359220208&q=erbil&api=no`;
+      const weatherAPI=`https://api.weatherapi.com/v1/current.json?key=64fb174f3156468f852120355220608&q=erbil&api=no`;
      
       axios.get(weatherAPI)
       .then((result)=>{setWeather(result.data);
         })
       .catch(()=>{})
       .then(()=>{});
-    },[weather]); 
+    },[]); 
   
     if (!weather) return <LoadSpiner/>
     

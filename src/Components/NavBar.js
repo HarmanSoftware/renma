@@ -4,6 +4,8 @@ import { Disclosure, Menu } from '@headlessui/react';
 import {MenuIcon, XIcon } from '@heroicons/react/outline';
 import DarkModeToggle from "react-dark-mode-toggle";
 import '../Assets/DarkMode.css'
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css'; 
 
 export default function NavBar(props) {
   
@@ -64,7 +66,7 @@ export default function NavBar(props) {
                         className={classNames(
                           location.pathname === item.href
                             ? 'bg-white'
-                            : ' text-white hover:bg-mauve hover:text-black',
+                            : ' text-white hover:bg-white hover:text-black',
                           'px-1 py-2 rounded-md text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined} 
@@ -78,10 +80,12 @@ export default function NavBar(props) {
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 {/* Profile dropdown */}
                 <Menu as="div" className="ml-3 relative">
-                  <div>
+                  <div> 
+                    <Tippy content='Change Mode'>
                     <span className="flex">
                     <DarkModeToggle size={80} onChange={props.toglleprops} checked={props.themeprops === "dark"} />
                     </span>
+                    </Tippy>  
                   </div>                  
                 </Menu>
               </div>
@@ -98,7 +102,7 @@ export default function NavBar(props) {
                   className={classNames(
                     location.pathname === item.href
                       ? 'bg-white'
-                      : 'text-white hover:bg-mauve hover:text-black',
+                      : 'text-white hover:bg-white hover:text-black',
                     'block px-1 py-2 rounded-md text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
