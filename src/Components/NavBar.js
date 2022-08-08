@@ -26,7 +26,7 @@ export default function NavBar(props) {
 
   return (
     <>
-    <Disclosure as="nav" className="bg-purple" id='nav-bg'>
+    <Disclosure as="nav" className="bg-purple sticky top-0 z-50" id='nav-bg'>
       {({ open }) => (
         <>
           <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -65,8 +65,8 @@ export default function NavBar(props) {
                         to={item.href}
                         className={classNames(
                           location.pathname === item.href
-                            ? 'bg-white'
-                            : ' text-white hover:bg-lightmauve hover:text-black',
+                            ? 'bg-lightmauve'
+                            : ' text-white hover:bg-white hover:text-black',
                           'px-1 py-2 rounded-md text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined} 
@@ -101,8 +101,8 @@ export default function NavBar(props) {
                   to={item.href}
                   className={classNames(
                     location.pathname === item.href
-                      ? 'bg-white'
-                      : 'text-white hover:bg-lightmauve hover:text-black',
+                      ? 'bg-lightmauve'
+                      : 'text-white hover:bg-white hover:text-black',
                     'block px-1 py-2 rounded-md text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}

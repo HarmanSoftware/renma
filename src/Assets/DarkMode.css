@@ -41,8 +41,11 @@ color:#fff
     margin: 10px;
   }  
   #light .switch label {
-    color: black;
+    color: #000;
   }  
   #dark .switch label {
-    color: white;
+    color: #fff;
   }
+ #dark #scroll-indicate{
+  background-color: #000;
+ }

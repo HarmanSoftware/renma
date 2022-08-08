@@ -1,11 +1,11 @@
 import React from 'react'
 import '../src/Assets/App.css';
-import '../src/Assets/DarkMode.css'
+import '../src/Assets/DarkMode.css';
+import '../src/Assets/Global.css';
+import { createContext, useState,useEffect} from 'react'
 import {Routes, Route} from "react-router-dom";
 
-
-import { createContext, useState,useEffect} from 'react'
-
+import BackTop from './Components/BackTop';
 import NavBar from './Components/NavBar';
 import Home from './Pages/Home';
 import About from './Pages/About';
@@ -14,6 +14,8 @@ import Renma from './Pages/Renma';
 import Contact from './Pages/Contact';
 import BookAppointment from './Pages/BookAppointment';
 import HeroHeader from './Components/HeroHeader';
+import ScrollIndicator from './Components/ScrollIndicator';
+
 
 export const ThemeContext = createContext(null);
 
@@ -40,7 +42,12 @@ function App() {
     <div className="App" id={theme}>
       <HeroHeader/>      
       <NavBar themeprops={theme} toglleprops={toggleTheme}/>  
-            
+      <ScrollIndicator/>     
+            <h1>My Heading</h1>
+            <h1>My Heading</h1>
+            <h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1>
+            <h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1>
+    <BackTop themeprops={theme}/>
      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
