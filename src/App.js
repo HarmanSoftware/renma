@@ -5,16 +5,19 @@ import '../src/Assets/Global.css';
 import { createContext, useState,useEffect} from 'react'
 import {Routes, Route} from "react-router-dom";
 
-import BackTop from './Components/BackTop';
 import NavBar from './Components/NavBar';
+
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Services from './Pages/Services';
 import Renma from './Pages/Renma';
 import Contact from './Pages/Contact';
 import BookAppointment from './Pages/BookAppointment';
+
 import HeroHeader from './Components/HeroHeader';
 import ScrollIndicator from './Components/ScrollIndicator';
+import BackTop from './Components/BackTop';
+import Footer from './Components/Footer';
 
 
 export const ThemeContext = createContext(null);
@@ -56,6 +59,7 @@ function App() {
         <Route path="contact" element={<Contact />} />
         <Route path="bookAppointment" element={<BookAppointment />} />
      </Routes>   
+    <Footer/>
     </div>
      </ThemeContext.Provider>
   );

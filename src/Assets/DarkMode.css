@@ -30,7 +30,7 @@ color:#fff
     color: #fff;
   }
   #dark ::selection {
-    background-color: #fff !important;   
+    background-color: #fff;   
     color: #000; 
   }
   .switch {    
@@ -48,4 +48,8 @@ color:#fff
   }
  #dark #scroll-indicate{
   background-color: #000;
+ }
+ #dark #footer{
+  background-color: #000;
+  color: #fff;
  }

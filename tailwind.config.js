@@ -10,7 +10,7 @@ module.exports = {
         'mauve': '#d5b8ff',
         'lightmauve': '#e2cfff',
         'blue-chill': '#0b7fab',
-        'scampi': '#736598',
+        'lightpurple': '#A78BFA',
         'vivid': '#f15a22',        
       },
     },
