@@ -53,3 +53,15 @@ color:#fff
   background-color: #000;
   color: #fff;
  }
+ #dark #not-found-bg{
+  background-color: #121212;
+  color: #fff;
+ }
+ #dark #back-home-btn-not-found{
+  background-color: #d5b8ff;
+  color: #000;
+ }
+ #dark #back-home-btn-not-found:hover{
+  background-color: #A78BFA;
+  color: #000;
+ }
