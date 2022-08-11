@@ -57,7 +57,7 @@ function App() {
         <Route path="bookAppointment" element={<BookAppointment />} />
         <Route path="*" element={<PageNotFound />} />
      </Routes>   
-    <Footer/>
+      <Footer/>
     </div>
      </ThemeContext.Provider>
   );

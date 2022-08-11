@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import '../Assets/DarkMode.css';
-import RenmaLogo from '../Assets/Images/renmaLogo.svg'
+import RenmaLogo from '../Assets/Images/RenmaLogo.svg'
 
 export default function Footer() {
   return (
