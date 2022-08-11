@@ -13,6 +13,7 @@ import Services from './Pages/Services';
 import Renma from './Pages/Renma';
 import Contact from './Pages/Contact';
 import BookAppointment from './Pages/BookAppointment';
+import PageNotFound from './Pages/PageNotFound';
 
 import HeroHeader from './Components/HeroHeader';
 import ScrollIndicator from './Components/ScrollIndicator';
@@ -46,11 +47,7 @@ function App() {
       <HeroHeader/>      
       <NavBar themeprops={theme} toglleprops={toggleTheme}/>  
       <ScrollIndicator/>     
-            <h1>My Heading</h1>
-            <h1>My Heading</h1>
-            <h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1>
-            <h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1><h1>My Heading</h1>
-    <BackTop themeprops={theme}/>
+      <BackTop themeprops={theme}/>
      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="about" element={<About />} />
@@ -58,6 +55,7 @@ function App() {
         <Route path="renma" element={<Renma />} />
         <Route path="contact" element={<Contact />} />
         <Route path="bookAppointment" element={<BookAppointment />} />
+        <Route path="*" element={<PageNotFound />} />
      </Routes>   
     <Footer/>
     </div>

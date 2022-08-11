@@ -17,7 +17,7 @@ export default function NavBar(props) {
         { name: 'Services', href: '/services', current: false },
         { name: 'Renma', href: '/renma', current: false },
         { name: 'Contact', href: '/contact', current: false },
-        { name: 'Appointment', href: '/bookAppointment', current: false },
+        { name: 'Appointment', href: '/bookAppointment', current: false },        
       ]
     
       function classNames(...classes) {
@@ -67,7 +67,7 @@ export default function NavBar(props) {
                           location.pathname === item.href
                             ? 'bg-lightmauve'
                             : ' text-white hover:bg-white hover:text-black',
-                          'px-1 py-2 rounded-md text-sm font-medium'
+                          'px-1 py-2 rounded-sm text-sm font-medium'
                         )}
                         aria-current={item.current ? 'page' : undefined} 
                       >                       
@@ -103,7 +103,7 @@ export default function NavBar(props) {
                     location.pathname === item.href
                       ? 'bg-lightmauve'
                       : 'text-white hover:bg-white hover:text-black',
-                    'block px-1 py-2 rounded-md text-base font-medium'
+                    'block px-1 py-2 rounded-sm text-base font-medium'
                   )}
                   aria-current={item.current ? 'page' : undefined}
                 >
