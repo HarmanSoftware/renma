@@ -1,8 +1,8 @@
-import Tippy from '@tippyjs/react';
 import React from 'react'
+import Tippy from '@tippyjs/react';
 import {Link} from 'react-router-dom'
 import '../Assets/DarkMode.css';
-import RenmaLogo from '../Assets/Images/RenmaLogo.svg'
+
 
 export default function Footer() {
   return (
@@ -12,7 +12,7 @@ export default function Footer() {
 		<div className="lg:w-1/3">
 			<Link rel="noopener noreferrer" to="/" className="flex justify-center space-x-3 lg:justify-start">
 				<div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-indigo-400">
-					<img src={RenmaLogo} alt='renma footer logo' />
+					<p>Logo</p>
 				</div>
 				<span className="self-center text-2xl font-semibold">Renma</span>
 			</Link>
