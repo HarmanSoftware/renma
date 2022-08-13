@@ -2,7 +2,7 @@
     background-color: #f3ebf6;    
   }  
   #dark {
-    background-color: #121212;
+    background-color: #292929;
     color: #fff;
   }
   #light .main {
@@ -67,5 +67,23 @@ color:#fff
  }
 #dark #contact-info{
   background-color: #02162A;
+  color: #fff;
+}
+#dark #contact-info{
+  background-color: #121212;
+}
+#dark #contact-us{
+  background-color: #000;  
+}
+#dark #send-btn{
+  background-color: #d5b8ff;
+  color: #000;
+}
+#dark #send-btn:hover{
+  background-color: #A78BFA;
+  color: #000;
+}
+#dark #contact-info-email, #dark  #contact-info-phone, #dark #contact-info-socials{
+  background-color: #333;
   color: #fff;
 }

@@ -3,38 +3,65 @@ import {Link} from 'react-router-dom'
 import Tippy from '@tippyjs/react';
 import '../Assets/DarkMode.css';
 
-import Email from '../Assets/Images/Email.png'
+import Email from '../Assets/Images/Emails.png'
 import Call from '../Assets/Images/Call.png'
-import Chat from '../Assets/Images/Chat.png'
-import ContactUs from '../Assets/Images/ContactUs.gif'
+import Chat from '../Assets/Images/Chatting.png'
+import ContactUs from '../Assets/Images/Contact.png'
+import Mail from '../Assets/Images/Send.png'
 
 export default function Contact() {
   return (
     <div>
-      <div className='container mx-auto grid grid-cols-2 py-6'>
-        <div className='bg-white p-6' id='contact-info'>            
+      <div className='container mx-auto grid lg:grid-cols-2 sm:w-auto sm:grid-cols-1 p-8'>
+        <div className='bg-soft-purple my-4' id="contact-us">
+<form className='p-4'>  
+            <div className='text-center font-medium text-4xl text-white py-3'>Contact Us</div>
+            <div className='text-center font-medium text-2xl text-white py-3'> <span className='text-red-500'>*</span> Indicates Required Fields</div>
+<div class="relative z-0 mb-6 w-full group py-1">
+      <input type="text" name="name" id="name" className="block py-2.5 px-0 w-full text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-mauve dark:focus:border-lightpurple focus:outline-none focus:ring-0 focus:border-white peer" placeholder=" " required=""/>
+      <label for="name" className="peer-focus:font-medium absolute text-xl text-white dark:text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-white peer-focus:dark:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"><span className='text-red-500 font-medium text-xl'>*</span> Full name</label>
+  </div>
+  <div class="relative z-0 mb-6 w-full group py-1">
+      <input type="email" name="floating_email" id="floating_email" className="block py-2.5 px-0 w-full text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-mauve dark:focus:border-lightpurple focus:outline-none focus:ring-0 focus:border-white peer" placeholder=" " required=""/>
+      <label for="floating_email" className="peer-focus:font-medium absolute text-lg text-white dark:text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-white peer-focus:dark:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"><span className='text-red-500 font-medium text-xl'>*</span> Email address</label>
+  </div>
+  <div class="relative z-0 mb-6 w-full group py-1">
+      <input type="tel" name="phone_number" id="phone_number" className="block py-2.5 px-0 w-full text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-mauve dark:focus:border-lightpurple focus:outline-none focus:ring-0 focus:border-white peer" placeholder=" "/>
+      <label for="phone_number" className="peer-focus:font-medium absolute text-lg text-white dark:text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-white peer-focus:dark:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number (Optional)</label>
+  </div>  
+  <div class="relative z-0 mb-6 w-full group py-1">
+      <textarea type="text" name="text-area" id="text-area" className="block py-2.5 px-0 w-full text-base text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-mauve dark:focus:border-lightpurple focus:outline-none focus:ring-0 focus:border-white peer rows=2 cols=50" placeholder=" " required=""/>
+      <label for="text_area" className="peer-focus:font-medium absolute text-lg text-white dark:text-white duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-white peer-focus:dark:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"><span className='text-red-500 font-medium text-xl'>*</span> Message</label>
+  </div>  
+  
+  <button type="submit" id="send-btn" className="flex items-center content-center mx-auto bg-bmauve hover:bg-lightmauve focus:ring-4 focus:outline-none focus:ring-mauve font-medium rounded-lg text-lg lg:w-26 lg:h-14 md:w-32 md:h-12 sm:w-18 sm:h-12 px-4 py-2 text-center dark:bg-mauve dark:hover:bg-lightpurple dark:focus:ring-mauve">
+  <img src={Mail} className='w-8 h-8 mx-1' alt='Heart icon img'/>
+  Send</button>
+</form>
+       
+        </div>
+        <div className='bg-lightpurple p-6' id='contact-info'>            
+         <div className='text-center font-medium text-4xl py-2'>Contact Info</div>
          <div className='text-center text-2xl font-medium p-1'></div>
          <div className='text-center'>
-          <img src={ContactUs} className='w-96 h-96 mx-auto' alt='Heart icon img'/>
+          <img src={ContactUs} alt='Contact us img'/>
          </div>
-         
-         <div className='font-medium p-1 flex items-center text-xl '>
-          <img src={Call} className='w-8 h-8 mx-1' alt='Call icon img'/> Phone:          
-         </div>
+         <div id="contact-info-phone" className='flex items-center font-medium py-2 my-2 text-xl rounded-sm bg-white shadow hover:shadow-md hover:scale-105 hover:duration-300'>
+          <img src={Call} className='w-8 h-8 mx-2' alt='Call icon img'/>         
          <div className='font-medium px-12'>
          +(964) 751 046 1213
          </div>
-
-         <div className='font-medium p-1 flex items-center text-xl'>
-          <img src={Email} className='w-8 h-8 mx-1' alt='Email icon img'/> Email:          
          </div>
+
+         <div id="contact-info-email" className='flex items-center font-medium py-2 my-2 text-xl rounded-sm bg-white shadow hover:shadow-md hover:scale-105 hover:duration-300'>
+          <img src={Email} className='w-8 h-8 mx-2' alt='Email icon img'/>         
          <div className='font-medium px-12'>
          Herman.muhemed@gmail.com
          </div>
-
-         <div className='font-medium p-1 flex items-center text-xl'>
-          <img src={Chat} className='w-8 h-8 mx-1' alt='Chat icon img'/> Social Media:         
          </div>
+
+         <div id="contact-info-socials" className='flex items-center font-medium py-2 my-2  text-xl rounded-sm bg-white shadow hover:shadow-md hover:scale-105 hover:duration-300'>
+          <img id='test-logo' src={Chat} className='w-8 h-8 mx-2' alt='Chat icon img'/>        
          <div className='flex font-medium px-12'>
          <Tippy content='Facebook'>
 					<Link rel="noopener noreferrer" to="#" className="flex items-center p-2 scale-125">
@@ -61,11 +88,7 @@ export default function Contact() {
 						</Tippy>
          </div>
       </div>
-        <div className='bg-purple my-4 '>
-           <form>
-            
-           </form>
-        </div>
+         </div>
     </div>
     </div>
   )
