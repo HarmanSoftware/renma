@@ -10,7 +10,7 @@ export default function HeroHeader() {
     const [weather, setWeather] = useState();      
 
     useEffect(()=>{
-      const weatherAPI=`https://api.weatherapi.com/v1/current.json?key=64fb174f3156468f852120355220608&q=erbil&api=no`;
+      const weatherAPI=`https://api.weatherapi.com/current.json?key=64fb174f3156468f852120355220608&q=erbil&api=no`;
      
       axios.get(weatherAPI)
       .then((result)=>{setWeather(result.data);
@@ -23,8 +23,8 @@ export default function HeroHeader() {
     
   return (
     <>
-     <div className='flex content-start justify-between bg-mauve' id='hero-header'>
-    <div className='flex items-center justify-center text-base font-medium px-1 h-12' tabIndex="1">  
+     <div className='flex content-start justify-between bg-mauve z-auto' id='hero-header'>
+    <div className='flex items-center justify-center text-base font-medium px-1 h-12 ' tabIndex="1">  
        {weather && <LocalTime/>}
     </div>    
     <div className='flex items-center justify-center text-base font-medium'>
