@@ -1,12 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import Tippy from "@tippyjs/react";
 import "../Assets/DarkMode.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-import Email from "../Assets/Images/Emails.png";
-import Call from "../Assets/Images/Call.png";
 import ContactUs from "../Assets/Images/BookAppointment.png";
 import Mail from "../Assets/Images/Send.png";
 
@@ -40,18 +36,16 @@ export default function BookAppointment() {
   });
 
   return (
-    <div>
-      <div className="flex items-center content-center bg-mauve font-medium text-3xl px-2 w-ful h-12 text-black">
-        Book Appointment
-      </div>
+    <>     
+      <div className='container mx-auto text-center text-3xl font-medium bg-soft-purple rounded-lg p-6 mt-8 text-white'>Book Appointment</div>
       <div className="text-center">
-        <img src={ContactUs} className="p-3" alt="Contact us img" />
+        <img className="p-3" src={ContactUs} alt="Contact us img" />
       </div>
       <div className="container mx-auto grid lg:grid-cols-1 sm:w-auto sm:grid-cols-1 p-8">
-        <div className="bg-soft-purple my-4 w-full" id="contact-us">
+        <div className="bg-soft-purple my-4 w-full rounded-lg" id="contact-us">
           <form className="p-4">
             <div className="text-center font-medium text-4xl text-white py-3">
-              Contact Us
+              Let's Care About You
             </div>
             <div className="text-center font-medium text-2xl text-white py-3">
               {" "}
@@ -159,6 +153,6 @@ export default function BookAppointment() {
           </form>
         </div>
       </div>
-    </div>
+    </>
   );
 }

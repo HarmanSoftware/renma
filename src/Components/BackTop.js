@@ -27,7 +27,7 @@ export default function BackTop(props) {
        {backTop &&
        <Tippy content="Back To Top">
        <button 
-        onClick={scrollUp} className='fixed bottom-10 right-8 left-8 h-12 w-12 '>
+        onClick={scrollUp} className='fixed bottom-10 right-8 left-8 h-12 w-12 z-50'>
             <img src={RocketUp} className='scale-125' alt='Back to top icon'/>
         </button>
         </Tippy>

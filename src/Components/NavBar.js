@@ -15,7 +15,6 @@ export default function NavBar(props) {
         { name: 'Home', href: '/', current: true},
         { name: 'About', href: '/about', current: false },
         { name: 'Services', href: '/services', current: false },
-        { name: 'Renma', href: '/renma', current: false },
         { name: 'Contact', href: '/contact', current: false },
         { name: 'Appointment', href: '/bookAppointment', current: false },        
       ]

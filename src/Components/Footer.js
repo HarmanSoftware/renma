@@ -11,11 +11,11 @@ export default function Footer() {
 	<div className="container flex flex-col justify-between py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
 		<div className="lg:w-1/3">
 			<Link rel="noopener noreferrer" to="/" className="flex justify-center space-x-3 lg:justify-start">
-				<div className="flex items-center justify-center w-12 h-12 rounded-full dark:bg-indigo-400">
-					<p>Logo</p>
-				</div>
 				<span className="self-center text-2xl font-semibold">Renma</span>
 			</Link>
+			<div className='text-justify pr-6'>
+			Our team of physiotherapists boast over 100 years of combined experienced. We provide an honest and ethical physiotherapy service to the residents of London and beyond. Our clinic is based in the centre of London and is very easy to access for everyone.
+			</div>
 		</div>
 		<div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">
 			<div className="space-y-3">
@@ -49,10 +49,7 @@ export default function Footer() {
 					</li>
                     <li>
 						<Link className='hover:bg-mauve hover:text-black p-1 rounded-sm'  rel="noopener noreferrer" to="/services">Services</Link>
-					</li>
-					<li>
-						<Link className='hover:bg-mauve hover:text-black p-1 rounded-sm' rel="noopener noreferrer" to="/renma">Renma</Link>
-					</li>
+					</li>					
                     <li>
 						<Link className='hover:bg-mauve hover:text-black p-1 rounded-sm' rel="noopener noreferrer" to="/contact">Contact</Link>
 					</li>
