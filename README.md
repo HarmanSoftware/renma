@@ -29,3 +29,5 @@ Email js library used for the purpose of sending emails.
 - Fully responsive.
 - Current weather.
 - Sending contact emails.
+- Form validation.
+- Booking physiotherapy appointment.
