@@ -17,7 +17,7 @@ A physiotherapy website to provide medical services and instruct peoples also we
 
 **Third party libraries:** Leaflet , Email Js , Axios , Formik and yup and etc
 
-**API:**  [Weather API]((https://www.weatherapi.com/api-explorer.aspx))
+**API:**  [Weather API](https://www.weatherapi.com/api-explorer.aspx)
 
 ## Back-end
 Email js library used for the purpose of sending emails.
