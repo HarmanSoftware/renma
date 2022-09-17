@@ -15,7 +15,7 @@ A physiotherapy website to provide medical services and instruct peoples also we
 
 **CSS frameworks:** Tailwind CSS
 
-**Third party libraries:** Leaflet , Email Js , Axios , Formik and yup and etc
+**Third party libraries:** React responsive carousel , Email Js , Axios , Formik and yup and etc
 
 **API:**  [Weather API](https://www.weatherapi.com/api-explorer.aspx)
 
@@ -32,4 +32,5 @@ Email js library used for the purpose of sending emails.
 - Form validation.
 - Booking physiotherapy appointment.
 - Back to top
+- React responsive carousel.
 - On page scroll indicator.
