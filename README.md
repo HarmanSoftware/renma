@@ -31,3 +31,5 @@ Email js library used for the purpose of sending emails.
 - Sending contact emails.
 - Form validation.
 - Booking physiotherapy appointment.
+- Back to top
+- On page scroll indicator.
